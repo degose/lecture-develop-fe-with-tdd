@@ -7,11 +7,20 @@ var ClickCountView = function(clickCounter, options) {
     increaseAndUpdateView() {
       clickCounter.increase()
       this.updateView()
+    },
+
+    decreaseAndUpdateView() {
+      clickCounter.decrease()
+      this.updateView()
     }
   }
   
-  options.triggerEl.on('click', () => {
+  options.incTriggerEl.on('click', () => {
    view.increaseAndUpdateView()   
+  })
+
+  options.decTriggerEl.on('click', () => {
+   view.decreaseAndUpdateView()   
   })
 
   return view

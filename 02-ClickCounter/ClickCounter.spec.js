@@ -18,4 +18,12 @@ describe('ClickCounter', ()=> {
       expect(counter.getCounter()).toBe(initialValue + 1)
     })
   })
+
+  describe('decrease()', ()=> {
+    it('카운터를 1 감소한다', ()=> {
+      const initialValue = counter.getCounter()
+      counter.decrease()
+      expect(counter.getCounter()).toBe(initialValue - 1)
+    })
+  })
 })

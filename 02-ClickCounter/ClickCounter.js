@@ -8,6 +8,10 @@ var ClickCounter = function() {
 
     increase() {
       counter++
+    },
+
+    decrease() {
+      counter--
     }
   }
 }

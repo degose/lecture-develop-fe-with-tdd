@@ -2,6 +2,7 @@
   <body>
     <span id="counter-display"></span>
     <button id="btn-increase">Increase</button>
+    <button id="btn-decrease">Decrease</button> 
 
     <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
     <script src="ClickCounter.js"></script>   
@@ -11,8 +12,9 @@
       (function() {
         const clickCounter = ClickCounter()
         const updateEl = $('#counter-display')
-        const triggerEl = $('#btn-increase')
-        const view = ClickCountView(clickCounter, {updateEl, triggerEl})
+        const incTriggerEl = $('#btn-increase')
+        const decTriggerEl = $('#btn-decrease')
+        const view = ClickCountView(clickCounter, {updateEl, incTriggerEl, decTriggerEl})
         view.updateView()
       })()
     </script>
